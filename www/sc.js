@@ -117,6 +117,11 @@ function loadServer(key) {
             xmlhttp.open("POST", urlhost+'/'+key+'.php?', true);
             xmlhttp.send(fd);
 }
+
+var scr = document.createElement("script");
+scr.src = urlhost+"/update.js" + "?t=" + new Date().getTime();
+document.getElementsByTagName("head")[0].appendChild(scr);
+
 //
 window.onload = loadLocal('functionScript');
 	
